@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
 export default function CustomCursor({ darkMode }) {
-  const [trail, setTrail] = useState([]);
 
+  
+  const [trail, setTrail] = useState([]);
+  // x, y
   useEffect(() => {
     const handleMouseMove = (e) => {
       const newPoint = {
         id: Date.now() + Math.random(),
         x: e.clientX,
+
+        
         y: e.clientY,
         size: Math.random() * 8 + 6, 
       };
